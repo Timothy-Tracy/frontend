@@ -1,0 +1,94 @@
+@import '../app.component.scss';
+@keyframes shatter {
+    0% { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); }
+    50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    100% { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); }
+}
+.shatter {
+    animation: shatter 5s ease-in-out infinite;
+}
+@keyframes neonPulse {
+    0%, 100% { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #3498db, 0 0 35px #3498db, 0 0 40px #3498db, 0 0 50px #3498db, 0 0 75px #3498db; }
+    50% { box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #3498db, 0 0 17px #3498db, 0 0 20px #3498db, 0 0 25px #3498db, 0 0 37px #3498db; }
+}
+.neonPulse {
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.rotate {
+    animation: rotate 2s linear infinite ;
+}
+@keyframes colorChange {
+    0% { background-color: #3498db; }
+    33% { background-color: #e74c3c; }
+    66% { background-color: #2ecc71; }
+    100% { background-color: #3498db; }
+}
+.color-change {
+    animation: colorChange 2s infinite;
+    border-radius: 2rem;
+}
+@keyframes flip {
+    0% { transform: perspective(400px) rotateY(0); }
+    100% { transform: perspective(400px) rotateY(360deg); }
+}
+.flip {
+    animation: flip 4s infinite;
+}
+@keyframes rainbow {
+    0% { background-color: red; }
+    14% { background-color: orange; }
+    28% { background-color: yellow; }
+    42% { background-color: green; }
+    57% { background-color: blue; }
+    71% { background-color: indigo; }
+    85% { background-color: violet; }
+    100% { background-color: red; }
+}
+.rainbow {
+    animation: rainbow 4s linear infinite;
+}
+.forecast-card {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    // background-color: #eeede5;
+    border-radius: 2em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    
+  }
+  
+  .forecast-content {
+    margin-top: 1em;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 2rem;
+  }
+  
+  th, td {
+    border: 1px solid $primary;
+    padding: 0.5em;
+    
+  }
+  
+  th {
+    background-color: $primary;
+    color: white;
+  }
+   
