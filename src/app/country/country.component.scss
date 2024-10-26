@@ -19,14 +19,14 @@
     10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
     20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
-.shake {
+.shake:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
 }
 @keyframes rotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-.rotate {
+.rotate:hover {
     animation: rotate 2s linear infinite ;
 }
 @keyframes colorChange {
@@ -43,7 +43,7 @@
     0% { transform: perspective(400px) rotateY(0); }
     100% { transform: perspective(400px) rotateY(360deg); }
 }
-.flip {
+.flip:hover {
     animation: flip 4s infinite;
 }
 @keyframes rainbow {
@@ -56,7 +56,7 @@
     85% { background-color: violet; }
     100% { background-color: red; }
 }
-.rainbow {
+.rainbow:hover {
     animation: rainbow 4s linear infinite;
 }
 .forecast-card {
@@ -64,6 +64,8 @@
     flex-direction: column;
     align-self: center;
     text-align: center;
+    justify-content: center;
+    padding: 5rem;
     // background-color: #eeede5;
     border-radius: 2em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
